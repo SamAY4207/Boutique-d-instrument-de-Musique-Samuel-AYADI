@@ -189,6 +189,14 @@
     padding-bottom: 32px;
 }
 
+.pt-64{
+    padding-top: 64px;
+}
+
+.pb-64{
+    padding-bottom: 64px;
+}
+
 .pt-128{
     padding-top: 128px;
 }
@@ -219,6 +227,35 @@
     padding-right: 20px;
 }
 
+ /* ------------------------------
+            POSITION
+ ---------------------------------*/
+/*Par défaut*/
+ .fixed{
+    position: fixed;
+    top: 0;
+    left: 0;
+ }
+
+ .sticky{
+    position: sticky;
+    left: 0;
+    top: 0;
+ }
+
+ .relative{
+    position: relative;
+    left: 0;
+    top: 0;
+ }
+
+ .absolute{
+    position: absolute;
+    left: 0;
+    top: 0;
+ }
+
+
 
 /* COULEURS 
 
@@ -231,37 +268,44 @@ Couleur 3 :#121002
 Couleur 4 :#F0E493
 */
 
-.bg1{
- background-color:#FCF8E7 ;
-}
 
-.bg2{
-    background-color: #48400A;
-}
-
-.kaki{
-    color: #48400A;
-}
 
 .ivory{
     color:#FCF8E7 ;
 }
 
-.black{
-    color: #121002;
+.broack{
+    color: #2E1410;
 }
 
 .gold{
     color:#F0E493;
 }
 
+.tang{
+    color: #FF8D5C;
+}
+
+
+
 .bghero{
-    background-image: url(assets/chenspec-background-7283780.jpg) ;
-    display: inline-block;
-    width: 100%;
+    background-image: url(assets/pexels-roman-odintsov-5855892.jpg) ;
+    background-size : 125%;
+	background-repeat : none;
+    background-position: 50%;
+    
     ;
     
     
+}
+
+
+.bgtang{
+    background-color: #FF8D5C;
+}
+
+.bgivory{
+    background-color: #FCF8E7;
 }
 
 
@@ -273,7 +317,7 @@ a{
 
 h1{
     font-family: "Great Vibes", cursive;
-    font-size: 40px;
+    font-size: 64px;
 }
 
 h2{
@@ -305,3 +349,33 @@ p{
 .sticky{
     position: sticky;
 }
+
+
+ /*Spéciales (fleurs)*/
+ .stick-flow1{
+    position: fixed;
+    top: 150px;
+    left: -40px;
+    z-index: 1;
+ }
+ 
+ .stick-flow2{
+    position: fixed;
+    top: 400px;
+    right: -40px;
+    z-index: -10;
+ }
+
+
+ .shadow{
+    text-shadow: #000000 2px 2px 10px;
+ }
+
+
+ .btn{
+    background-color: #FF8D5C;
+    color: #FCF8E7;
+    border-radius: 5px;
+    padding: 10px;
+    width: auto;
+ }
