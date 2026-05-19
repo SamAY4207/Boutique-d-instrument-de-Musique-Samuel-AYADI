@@ -49,7 +49,7 @@ function affichePromesses(tableauPromesses) {
     tableauPromesses.forEach(promesse => {
 
         let promesseCard = `
-        <p class="w-30 broack pb-16 pt-16">${promesse}</p>
+        <h4 class="w-30 broack finhead pb-16 pt-16">${promesse}</h4>
         
         `
         document.querySelector("#promesses").innerHTML += promesseCard;
