@@ -69,7 +69,7 @@ function afficheProduits(tableauProduits) {
 
         let produitCard = `
                     <div class=" w-45 flex space-between align-center mb-32">
-                        <img src="${produit.image}" alt="" class="w-30">
+                        <img src="${produit.image}" alt="" class="w-30 border-radius-10">
                         <div class="w-60 flex align-center justify-start pb-16 pt-16">
                             <h3 class="w-100 broack pb-16">${produit.nom}</h3>
                             <p class="w-100 broack pb-16">${produit.description}</p>
@@ -95,7 +95,7 @@ function afficheServices(tableauServices) {
 
         let serviceCard = `
                     <div class="w-30 flex justify-start align-center pb-16 pt-16">
-                        <img src="${service.image}" alt="" class="w-100">
+                        <img src="${service.image}" alt="" class="w-100 border-radius-25">
                         
                         <div class="w-100 flex justify-start align-center pb-16 pt-16">
                             <h3 class="w-100 broack pb-16">${service.nom}</h3>
