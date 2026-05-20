@@ -31,7 +31,7 @@ function afficheHero(data) {
         <div class="flex jistify-start align-center">
                 <h2 class="w-100 mb-32 mt-32 gold shadow">${data.nomEntreprise}</h2>
                 <h1 class="w-100 mb-32 mt-32 tang shadow">${data.accroche}</h1>
-                <a href="#produits" class="w-100 mb-128 mt-128 btn">${data.callToAction}</a>
+                <a href="#produits-sec" class="w-100 mb-128 mt-128 btn">${data.callToAction}</a>
             </div>
         `
     document.querySelector("#hero").innerHTML += heroCard;
@@ -122,10 +122,10 @@ function afficheTemoignages(tableauTemoignages) {
     tableauTemoignages.forEach(temoignage => {
 
         let temoignageCard = `
-                    <div class="flex justify-start align-center pb-16 pt-16 swiper-slide w-60">
+                    <div class="flex justify-start align-center pb-16 pt-16 swiper-slide w-60 card-temoignage">
                         <div class="w-100 flex space-between align-center">
-                            <h3 class="w-70 broack pb-16 pt-16">${temoignage.prenom}</h3>
-                            <p class="w-25 gold">${etoile2(temoignage.note)}</p>
+                            <h3 class="w-70 broack pb-16">${temoignage.prenom}</h3>
+                            <p class="w-25 gold card-etoiles">${etoile2(temoignage.note)}</p>
                             <h4 class="w-70 broack pb-16 pt-16">${temoignage.prestation}</h4>
                         </div>
                         
@@ -150,6 +150,12 @@ var swiper = new Swiper(".mySwiper", {
 });
 
 
+/**
+ * 
+ * role : transformer une note de 0 à 5 en étoiles (version brute)
+ * param : note 
+ * returns : étoiles
+ */
 
 /*
 function etoile1(temoignage.note) {
@@ -172,6 +178,13 @@ if (temoignage.note = 0) {
 
 
     */
+
+/**
+ * 
+ * role : transformer une note de 0 à 5 en étoiles (version repeat avec l'aide de Nicolas)
+ * param : note 
+ * returns : étoiles
+ */
 function etoile2(note) {
 return "★".repeat(note) + "☆".repeat(5-note)
 }
