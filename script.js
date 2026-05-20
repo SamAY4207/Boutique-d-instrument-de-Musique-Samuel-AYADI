@@ -11,7 +11,7 @@ fetch("instruments-musique-monde.json")
     .then(data => {
         // récupère toutes les données dans la console
         console.log(data)
-        //afficheHero(data)
+        afficheHero(data)
         affichePromesses(data.promesses)
         afficheProduits(data.produits)
         afficheServices(data.services)
@@ -27,7 +27,7 @@ fetch("instruments-musique-monde.json")
 
 function afficheHero(data) {
 
-        let HeroCard = `
+        let heroCard = `
         <div class="flex jistify-start align-center">
                 <h2 class="w-100 mb-32 mt-32 gold shadow">${data.nomEntreprise}</h2>
                 <h1 class="w-100 mb-32 mt-32 tang shadow">${data.accroche}</h1>
@@ -122,7 +122,7 @@ function afficheTemoignages(tableauTemoignages) {
     tableauTemoignages.forEach(temoignage => {
 
         let temoignageCard = `
-                    <div class="w-75 flex justify-start align-center pb-16 pt-16">
+                    <div class="flex justify-start align-center pb-16 pt-16 swiper-slide">
                             <h3 class="w-100 broack pb-16 pt-16">${temoignage.prenom}</h3>
                             <h4 class="w-100 broack pb-16 pt-16">${temoignage.prestation}</h4>
                             <p class="w-100 broack pb-16 pt-16">${temoignage.commentaire}!</p>
@@ -135,3 +135,12 @@ function afficheTemoignages(tableauTemoignages) {
 
     });
 }
+
+var swiper = new Swiper(".mySwiper", {
+      slidesPerView: "auto",
+      spaceBetween: 30,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });

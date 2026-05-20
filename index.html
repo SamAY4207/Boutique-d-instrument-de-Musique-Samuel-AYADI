@@ -5,19 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script src="script.js" defer></script>
 </head>
 
 <body class="bgivory">
-    <header class="flex bgivory sticky">
+    <header class="flex bgivory stickyhero">
         <div class="flex space-between align-center container-1200">
             <a href="index.html" class="w-20"><img src="img/logo-instrument-1.png" alt="" class="w-30"></a>
             <nav class="w-60 flex space-between align-center">
-                <a href="#promesses" class="w-20 broack">Nos promesses</a>
-                <a href="#produits" class="w-20 broack">Nos produits</a>
-                <a href="#services" class="w-20 broack">Nos services</a>
-                <a href="#temoignages" class="w-30 broack">Ce qu'ils en ont pensé</a>
+                <a href="#promesses-sec" class="w-20 broack">Nos promesses</a>
+                <a href="#produits-sec" class="w-20 broack">Nos produits</a>
+                <a href="#services-sec" class="w-20 broack">Nos services</a>
+                <a href="#temoignages-sec" class="w-30 broack">Ce qu'ils en ont pensé</a>
             </nav>
         </div>
     </header>
@@ -29,23 +31,15 @@
         <!-- Filigrane en bg 2 -->
         <img src="assets/instrument-isolee.png" alt="" class="w-10 stick-flow2">
 
-        <section class="bghero  pb-64 pt-96">
+        <section id="hero-sec" class="bghero  pb-64 pt-96">
             <div id="hero" class="container-1200">
-                <div class="flex jistify-start align-center">
-                    <h2 class="w-100 mb-32 mt-32 gold shadow"><!-- ${nomEntreprise} -->MusicHalle - Instruments du Monde
-                    </h2>
-                    <h1 class="w-100 mb-32 mt-32 tang shadow"><!--${accroche}-->Explorez la diversité musicale avec
-                        MusicHalle, votre
-                        boutique d'instruments du monde à Paris</h1>
-                    <a href="#produits" class="w-100 mb-128 mt-128 btn"><!--${callToAction}-->Découvrez notre collection
-                        unique</a>
-                </div>
+                
             </div>
 
 
         </section>
 
-        <section class=" pb-64 pt-64">
+        <section id="promesses-sec" class=" pb-64 pt-64">
             <div class="flex space-between align-center container-1200 mb-32">
                 <h2 class="w100 pb-16 pt-16 broack">Ce que nous vous promettons</h2>
 
@@ -57,7 +51,7 @@
             </div>
         </section>
 
-        <section class="bgtang pb-64 pt-64">
+        <section id="produits-sec" class="bgtang pb-64 pt-64">
             <div class="container-1200 flex space-between align-center mb-32">
                 <h2 class="w-100 mb-16 font1 broack">Nos Intruments</h2>
                 <div id="produits" class=" flex space-between align-center ">
@@ -68,7 +62,7 @@
             </div>
         </section>
 
-        <section class=" pb-64 pt-64">
+        <section id="services-sec" class=" pb-64 pt-64">
             <div class="container-1200 flex space-between align-center mb-32">
                 <h2 class="w-100 mb-16 kaki">Nos services</h2>
                 <div id="services" class=" flex space-between align-center ">
@@ -77,13 +71,14 @@
             </div>
         </section>
 
-        <section class="bgtang pb-64 pt-64">
+        <section id="temoignages-sec" class="bgtang pb-64 pt-64">
             <div class="container-1200 flex space-between align-center">
                 <h2 class="w-100 broack  pb-16 pt-16">Ce qu'ils ont penser de nous</h2>
-                <div id="temoignages" class=" flex space-between align-center ">
+                <div class=" swiper mySwiper">
+                <div id="temoignages" class="swiper-wrapper">
 
                 </div>
-                
+                </div>
             </div>
         </section>
 
