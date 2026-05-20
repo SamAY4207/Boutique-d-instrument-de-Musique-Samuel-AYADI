@@ -27,14 +27,14 @@ fetch("instruments-musique-monde.json")
 
 function afficheHero(data) {
 
-        let heroCard = `
+    let heroCard = `
         <div class="flex jistify-start align-center">
                 <h2 class="w-100 mb-32 mt-32 gold shadow">${data.nomEntreprise}</h2>
                 <h1 class="w-100 mb-32 mt-32 tang shadow">${data.accroche}</h1>
                 <a href="#produits" class="w-100 mb-128 mt-128 btn">${data.callToAction}</a>
             </div>
         `
-        document.querySelector("#hero").innerHTML += heroCard;
+    document.querySelector("#hero").innerHTML += heroCard;
 
 }
 
@@ -118,16 +118,20 @@ function afficheServices(tableauServices) {
  */
 
 function afficheTemoignages(tableauTemoignages) {
-
+    // ★ 
     tableauTemoignages.forEach(temoignage => {
 
         let temoignageCard = `
-                    <div class="flex justify-start align-center pb-16 pt-16 swiper-slide">
-                            <h3 class="w-100 broack pb-16 pt-16">${temoignage.prenom}</h3>
-                            <h4 class="w-100 broack pb-16 pt-16">${temoignage.prestation}</h4>
-                            <p class="w-100 broack pb-16 pt-16">${temoignage.commentaire}!</p>
+                    <div class="flex justify-start align-center pb-16 pt-16 swiper-slide w-60">
+                        <div class="w-100 flex space-between align-center">
+                            <h3 class="w-70 broack pb-16 pt-16">${temoignage.prenom}</h3>
+                            <p class="w-25 gold">${etoile2(temoignage.note)}</p>
+                            <h4 class="w-70 broack pb-16 pt-16">${temoignage.prestation}</h4>
                         </div>
-                        <p class="w-20 gold">${temoignage.note}/5</p>
+                        
+                        <p class="w-100 broack pb-16 pt-16">${temoignage.commentaire}!</p>
+                    </div>
+                        
 
             
         `
@@ -137,10 +141,37 @@ function afficheTemoignages(tableauTemoignages) {
 }
 
 var swiper = new Swiper(".mySwiper", {
-      slidesPerView: "auto",
-      spaceBetween: 30,
-      pagination: {
+    slidesPerView: "auto",
+    spaceBetween: 30,
+    pagination: {
         el: ".swiper-pagination",
         clickable: true,
-      },
-    });
+    },
+});
+
+
+
+/*
+function etoile1(temoignage.note) {
+if (temoignage.note = 0) {
+       return(☆☆☆☆☆)
+}   else if (temoignage.note = 1){
+    } return(★☆☆☆☆)
+}   else if (temoignage.note = 2){
+    } return(★★☆☆☆)
+}   else if (temoignage.note = 3){
+    } return(★★★☆☆)
+}   else if (temoignage.note = 4){
+    } return(★★★★☆)
+}   else {
+    } return(★★★★★)
+}
+    */
+
+/*
+
+
+    */
+function etoile2(note) {
+return "★".repeat(note) + "☆".repeat(5-note)
+}

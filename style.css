@@ -390,7 +390,7 @@ p {
     position: fixed;
     top: 150px;
     left: -40px;
-    z-index: 0;
+    z-index: -5;
 }
 
 .stick-flow2 {
@@ -457,13 +457,7 @@ body {
 }
 
 .swiper-slide {
-    width: 80%;
-}
-
-.swiper-slide:nth-child(2n) {
     width: 60%;
+    
 }
 
-.swiper-slide:nth-child(3n) {
-    width: 40%;
-}
