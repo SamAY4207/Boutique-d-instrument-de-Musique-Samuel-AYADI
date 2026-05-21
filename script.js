@@ -125,11 +125,13 @@ function afficheTemoignages(tableauTemoignages) {
                     <div class="flex justify-start align-center pb-16 pt-16 swiper-slide w-60 card-temoignage">
                         <div class="w-100 flex space-between align-center">
                             <h3 class="w-70 broack pb-16">${temoignage.prenom}</h3>
-                            <p class="w-25 gold card-etoiles">${etoile2(temoignage.note)}</p>
+                            <div class="w-25 flex justify-center align-center">
+                                <p class="w-100 gold card-etoiles">${etoile2(temoignage.note)}</p>
+                            </div>
                             <h4 class="w-70 broack pb-16 pt-16">${temoignage.prestation}</h4>
                         </div>
                         
-                        <p class="w-100 broack pb-16 pt-16">${temoignage.commentaire}!</p>
+                        <p class="w-100 broack pb-16 pt-16">${temoignage.commentaire}</p>
                     </div>
                         
 

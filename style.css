@@ -338,6 +338,9 @@ Couleur 4 :#F0E493
     background-size: 125%;
     background-repeat: none;
     background-position: 50%;
+    position: relative;
+    z-index: -3;
+        
 
     ;
 
@@ -410,15 +413,36 @@ p {
 .stick-flow1 {
     position: fixed;
     top: 150px;
-    left: -40px;
+    left: -5px;
     z-index: -5;
 }
 
 .stick-flow2 {
     position: fixed;
     top: 400px;
-    right: -40px;
-    z-index: -10;
+    right: -5px;
+    z-index: -5;
+}
+
+
+
+.stick-flow3 {
+    position: relative;
+    top: -55px;
+    left: 0px;
+    z-index: 0;
+    width: 14%;
+    height: 150%;
+    
+}
+
+.stick-flow4 {
+    position: relative;
+    top: -55px;
+    right: 0px;
+    z-index: 0;
+    width: 14%;
+    height: 150%;
 }
 
 /*LIBRAIRIE SWIPER*/
@@ -488,7 +512,7 @@ body {
     background-color: #FF8D5C;
     padding: 16px;
     font-size: 32px;
-    padding-right: 8px;
+    padding-right: 16px;
 }
 
 .border-radius-10 {
@@ -505,5 +529,5 @@ body, html {
 
 
 section {
-    scroll-margin-top: 100px;
+    scroll-margin-top: 50px;
 }
